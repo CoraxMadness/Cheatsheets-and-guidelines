@@ -1,0 +1,31 @@
+#Following steps are skippable if docker is already installed and running.
+###########################################################################
+#Get docker:
+
+  #Manjaro Linux (Arch):
+
+    #This updates your OS
+      sudo pacman -Syu
+
+    #This installs docker
+      sudo pacman -S docker
+
+    #This runs and enables docker on launch
+      sudo systemctl start docker
+      sudo systemctl enable docker
+    
+    #Check version
+      sudo docker version
+    
+#Get rid of permanent sudo:
+
+  #Add your user to docker group
+    sudo usermod -aG docker $USER
+    
+    reboot OS
+    
+#Test
+
+  docker run hello-world
+###########################################################################
+
