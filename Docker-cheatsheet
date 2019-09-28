@@ -27,5 +27,16 @@
 #Test
 
   docker run hello-world
+
+#If "Cannot connect to the Docker daemon" error occurs:
+
+  env | grep DOCKER_HOST
+  
+  #If this command returns a value, the Docker client is set to connect to a Docker daemon running on that host. 
+  #If it is unset, the Docker clientIf this command returns a value, the Docker client is set to connect to a Docker
+  daemon running on that host. 
+  #If it is set in error, use the following command to unset it:
+  
+    unset DOCKER_HOST
 ###########################################################################
 
